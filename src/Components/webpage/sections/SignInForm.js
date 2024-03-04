@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const SignInForm = () => {
   const [showpassword, setShowpassword] = useState(true);
   return (
-    <div className="w-1/4  px-16 py-16  flex  flex-col items-left justify-center gap-4 bg-black bg-opacity-60">
+    <div className="w-96 px-16 py-16  flex  flex-col items-left justify-center gap-4 bg-black bg-opacity-60">
       <h1 className="text-white text-2xl font-extrabold ">Sign In</h1>
       <form
         action="/profile"
@@ -11,33 +11,31 @@ const SignInForm = () => {
       >
         <input
           type="text"
-          className="px-4 py-2 w-full placeholder:text-sm rounded-md bg-transparent border-2 border-gray-600"
+          className="px-4 py-2 w-72 placeholder:text-sm rounded-md bg-transparent border-2 border-gray-600"
           placeholder="Email or Phone Number"
         />
         <input
           type="password"
-          className={`px-4 py-2 w-full placeholder:text-sm rounded-md bg-transparent border-2 border-gray-600 ${
+          className={`px-4 py-2 w-72 placeholder:text-sm rounded-md bg-transparent border-2 border-gray-600 ${
             showpassword ? "hidden" : "block"
           }`}
           placeholder="Password"
         />
 
-        <button className="bg-red-700 text-white text-sm py-2 px-4 w-full rounded-md">
+        <button className="bg-red-700 w-72 text-white text-sm py-2 px-4 rounded-md">
           Send sign-in code
         </button>
+        <p className="text-white text-sm text-center">OR</p>
+        <button
+          className="text-white text-sm bg-gray-700 w-72 p-2 rounded-md "
+          onClick={() => setShowpassword(!showpassword)}
+        >
+          {showpassword ? "use password" : "use a sign-in code "}
+        </button>
+        <p className="text-center hover:underline text-sm text-white">
+          Forget email or phone number?
+        </p>
       </form>
-      <p className="text-white text-sm text-center">OR</p>
-
-      <button
-        className="text-white text-sm bg-gray-700 w-full p-2 rounded-md "
-        onClick={() => setShowpassword(!showpassword)}
-      >
-        {showpassword ? "use password" : "use a sign-in code "}
-      </button>
-
-      <p className="text-center hover:underline text-sm text-white">
-        Forget email or phone number?
-      </p>
 
       <div className="flex gap-2">
         <input

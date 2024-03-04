@@ -8,7 +8,7 @@ const Signin = () => {
     <>
       <div className="w-screen signin">
         <SignInNavbar />
-        <div className="w-screen h-screen flex items-center justify-center">
+        <div className="w-screen flex items-center justify-center py-20">
           <SignInForm />
         </div>
         <SignInFooter />

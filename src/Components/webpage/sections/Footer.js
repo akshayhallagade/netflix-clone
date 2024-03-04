@@ -1,5 +1,6 @@
 import React from "react";
 import Translate from "../elements/Translate";
+import Branding from "../elements/Branding";
 
 const Footer = () => {
   const pageslinks = [
@@ -41,12 +42,7 @@ const Footer = () => {
           <p>Netflix India</p>
         </div>
 
-        <div className="text-white w-full text-center flex flex-col justify-center items-center">
-          <p>Created By :</p>
-          <p className="text-xl hover:text-red-500 duration-200 delay-200">
-            Akshay Hallagade
-          </p>
-        </div>
+        <Branding />
       </div>
     </footer>
   );

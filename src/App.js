@@ -5,6 +5,7 @@ import Signup from "./Pages/Signup";
 import Signin from "./Pages/Signin";
 import Profile from "./Pages/Profiles";
 import Homepage from "./Pages/Homepage";
+import Browse from "./Pages/Browse";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route exact path="/" Component={Signup} />
         <Route path="/signin" Component={Signin} />
         <Route path="/profile" Component={Profile} />
-        <Route path="/browse" Component={Homepage} />
+        <Route path="/browse" Component={Browse} />
       </Routes>
     </BrowserRouter>
   );
