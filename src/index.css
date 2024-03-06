@@ -23,6 +23,10 @@ body {
     rgba(0, 0, 0, 0)
   );
 }
+.top10ListNumber {
+  -webkit-text-stroke: 5px gray;
+  -webkit-text-fill-color: black;
+}
 
 .signin,
 .signup {

@@ -28,6 +28,8 @@ import {
   FaGithub as Github,
 } from "react-icons/fa";
 
+import { IoMdThumbsUp as MostLiked } from "react-icons/io";
+
 export {
   Info,
   CaretDown,
@@ -45,4 +47,5 @@ export {
   Github,
   Instagram,
   LinkedIn,
+  MostLiked,
 };
