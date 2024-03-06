@@ -5,14 +5,15 @@ const NumberCard = (props) => {
   return (
     <div className="w-52 group relative z-0 hover:z-30 transition">
       <div className="flex">
-        <div className="text-9xl font-extrabold text-white border-2 top10ListNumber">
-          {props.id}
+        <div className="text-9xl font-extrabold text-white top10ListNumber">
+          {props.id + 1}
         </div>
-        <div className="object-cover">
+        <div className="object-cover w-40 -ml-4">
           <img
-            className="w-52 opacity-100 hover:opacity-0"
+            className="opacity-100 hover:opacity-0"
             src={props.img}
             alt="img"
+            width="120px"
           />
         </div>
       </div>

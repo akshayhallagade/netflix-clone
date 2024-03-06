@@ -9,7 +9,7 @@
 }
 body {
   overflow-x: hidden;
-  background-color: black;
+  background-color: rgb(18, 18, 18);
 }
 
 .navbar-effect {
@@ -57,4 +57,8 @@ body {
 }
 .cardgenres {
   font-size: 12px;
+}
+
+.imgoverlay {
+  background: linear-gradient(to top, black, rgba(255, 255, 255, 0));
 }

@@ -10,13 +10,13 @@ const Navbar = () => {
         <li className=" pr-4">
           <img className="w-28" src={logo} alt="" />
         </li>
-        <li className="">Home</li>
-        <li className="">TV Shows</li>
-        <li className="">Movies</li>
-        <li className="">New & Popular</li>
-        <li className="">My List</li>
-        <li className="">Browse</li>
-        <li className="">Browse by Language</li>
+        <li>Home</li>
+        <li>TV Shows</li>
+        <li>Movies</li>
+        <li>New & Popular</li>
+        <li>My List</li>
+        <li>Browse</li>
+        <li>Browse by Language</li>
       </ul>
       <ul className="flex gap-2 w-fit text-xs  items-center float-right">
         <li className=" ">

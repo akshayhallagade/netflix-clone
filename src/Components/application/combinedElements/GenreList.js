@@ -12,7 +12,6 @@ import NumberCard from "./NumberCard";
 
 const GenreList = (props) => {
   const genrenames = {
-    28: "Action",
     12: "Adventure",
     16: "Animation",
     35: "Comedy",
@@ -25,6 +24,7 @@ const GenreList = (props) => {
     27: "Horror",
     10402: "Music",
     9648: "Mystery",
+    28: "Action",
     10749: "Romance",
     878: "Science Fiction",
     10770: "TV Movie",

@@ -19,7 +19,6 @@ const Collection = () => {
       category: true,
       movie_id: 28,
     },
-
     {
       id: 3,
       name: "Top 10 Movies in India Today",
