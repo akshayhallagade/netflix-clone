@@ -66,7 +66,8 @@ const GenreList = (props) => {
           props.genre.startsWith("Top 10") ? (
             <NumberCard
               key={index}
-              id={index}
+              id={item.id}
+              number={index}
               title={item.title}
               img={`${baseURL}${item.poster_path}`}
               genrenameslist={item.genre_ids.map((genre) => {
@@ -74,11 +75,12 @@ const GenreList = (props) => {
               })}
               watch_rate={Math.round(item.vote_average * 10)}
               isMostLiked={item.vote_count}
+              mediaType={"movie"}
             />
           ) : (
             <Card
               key={index}
-              id={index}
+              id={item.id}
               title={item.title}
               img={`${baseURL}${item.backdrop_path}`}
               genrenameslist={item.genre_ids.map((genre) => {
@@ -86,6 +88,7 @@ const GenreList = (props) => {
               })}
               watch_rate={Math.round(item.vote_average * 10)}
               isMostLiked={item.vote_count}
+              mediaType={"movie"}
             />
           )
         )}

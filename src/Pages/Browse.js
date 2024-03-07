@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Header from "../Components/application/sections/Header";
 import Navbar from "../Components/application/sections/Navbar";
 import Content from "../Components/application/sections/Content";
+import SearchedContent from "../Components/application/combinedElements/SearchedContent";
+import { SearchItemsContext } from "../Context/SearchedItemsProvider";
 
 const Browse = () => {
   // Layer 1 -> -10 (HeaderImage, Background Color Black)
@@ -9,6 +11,10 @@ const Browse = () => {
   // Layer 3 ->  10 (Navbar)
 
   const [data, setData] = useState({});
+
+  // getting search Result;
+  const searchContext = useContext(SearchItemsContext);
+  const { searchedData } = searchContext;
 
   // Header Data
   const options = {
@@ -36,14 +42,19 @@ const Browse = () => {
     fetchData();
   }, []);
 
-  console.log(data);
-  console.log(data.dackdrop_path);
-
   return (
-    <div className="relative">
+    <div className="relative h-fit">
       <Navbar />
-      <Header movieData={data} movieImg={data.backdrop_path} />
-      <Content movieData={data} />
+      {/* <SearchedContent /> */}
+      {searchedData ? (
+        <SearchedContent />
+      ) : (
+        <>
+          {" "}
+          <Header movieData={data} movieImg={data.backdrop_path} />
+          <Content movieData={data} />
+        </>
+      )}
     </div>
   );
 };

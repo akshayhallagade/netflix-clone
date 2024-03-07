@@ -6,6 +6,7 @@ import {
   IoPlaySharp as Play,
   IoSearch as Search,
   IoAddSharp as Add,
+  IoCheckmarkSharp as Added,
   IoChevronDown as Down,
   IoNotificationsOutline as Notification,
 } from "react-icons/io5";
@@ -48,4 +49,5 @@ export {
   Instagram,
   LinkedIn,
   MostLiked,
+  Added,
 };

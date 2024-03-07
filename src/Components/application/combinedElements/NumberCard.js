@@ -6,7 +6,7 @@ const NumberCard = (props) => {
     <div className="w-52 group relative z-0 hover:z-30 transition">
       <div className="flex">
         <div className="text-9xl font-extrabold text-white top10ListNumber">
-          {props.id + 1}
+          {props.number + 1}
         </div>
         <div className="object-cover w-40 -ml-4">
           <img
