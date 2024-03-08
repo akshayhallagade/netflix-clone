@@ -9,6 +9,7 @@ import {
   IoCheckmarkSharp as Added,
   IoChevronDown as Down,
   IoNotificationsOutline as Notification,
+  IoCloseSharp as Cross,
 } from "react-icons/io5";
 
 import {
@@ -50,4 +51,5 @@ export {
   LinkedIn,
   MostLiked,
   Added,
+  Cross,
 };

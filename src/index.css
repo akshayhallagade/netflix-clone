@@ -16,6 +16,10 @@ body {
   background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
 }
 
+.detailesPanelOverlay {
+  background: linear-gradient(to top, rgb(17, 24, 39), rgba(255, 255, 255, 0));
+}
+
 .navbar-background {
   background-image: linear-gradient(
     to bottom,

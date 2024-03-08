@@ -52,7 +52,7 @@ const GenreList = (props) => {
         .catch((err) => console.error(err));
 
     fetchData();
-  }, []);
+  }, [props.site]);
 
   // url to get images
   const baseURL = "https://image.tmdb.org/t/p/w500";
@@ -89,6 +89,8 @@ const GenreList = (props) => {
               watch_rate={Math.round(item.vote_average * 10)}
               isMostLiked={item.vote_count}
               mediaType={"movie"}
+              isWatchList={false}
+              releaseYear={item.release_date.split("-")[0]}
             />
           )
         )}
