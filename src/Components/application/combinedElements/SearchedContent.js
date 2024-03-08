@@ -86,6 +86,7 @@ const SearchedContent = (props) => {
               })}
               watch_rate={Math.round(item.vote_average * 10)}
               isMostLiked={item.vote_count}
+              isWatchList={true}
             />
           );
         })}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Profile from "../../../img/profiles/profile1.png";
 import { ArrowDown } from "../../../utils/icons";
 
-const LogInButton = () => {
+const LogOutButton = () => {
   const [showButton, setShowButton] = useState(false);
   return (
     <div className="relative">
@@ -21,12 +21,15 @@ const LogInButton = () => {
           showButton ? "visible" : "invisible"
         }`}
       >
-        <button className="w-fit p-1 text-white text-nowrap hover:underline hover:text-red-400">
+        <a
+          href="/"
+          className="w-fit p-1 text-white text-nowrap hover:underline hover:text-red-400"
+        >
           Sign out of Netflix
-        </button>
+        </a>
       </div>
     </div>
   );
 };
 
-export default LogInButton;
+export default LogOutButton;

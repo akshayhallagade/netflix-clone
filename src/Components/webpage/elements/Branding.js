@@ -1,5 +1,6 @@
 import React from "react";
 import { Instagram, Github, LinkedIn } from "../../../utils/icons";
+import { Link } from "react-router-dom";
 
 const Branding = () => {
   return (
@@ -12,9 +13,15 @@ const Branding = () => {
       </div>
 
       <div className="flex gap-4 py-2">
-        <LinkedIn size={25} />
-        <Github size={25} />
-        <Instagram size={25} />
+        <Link to="https://www.linkedin.com/in/akshayhallagade/" target="_blank">
+          <LinkedIn size={25} />
+        </Link>
+        <Link to="https://github.com/akshayhallagade" target="_blank">
+          <Github size={25} />
+        </Link>
+        <Link to="https://www.instagram.com/aksh_hallagade/" target="_blank">
+          <Instagram size={25} />
+        </Link>
       </div>
     </div>
   );

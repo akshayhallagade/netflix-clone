@@ -1,7 +1,5 @@
 import React, { useState, useContext } from "react";
 import HeaderPlayButton from "../elements/HeaderPlayButton";
-
-import img from "../../../img/movieimg/movie14.jpg";
 import {
   Play,
   Add,
@@ -54,7 +52,9 @@ const Card = (props) => {
     <>
       <div className="w-fit group relative z-0 hover:z-30 transition">
         <img
-          className="min-w-52 opacity-100 hover:opacity-0"
+          className={`opacity-100 hover:opacity-0 ${
+            props.isWatchList ? "w-fit" : "min-w-52"
+          }`}
           src={props.img}
           alt="img"
         />

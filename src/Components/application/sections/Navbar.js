@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../../img/webpage/logo.png";
 import SearchBar from "../combinedElements/SearchBar";
 import { Link } from "react-router-dom";
-import LogInButton from "../combinedElements/LogInButton";
+import LogOutButton from "../combinedElements/LogOutButton";
 const Navbar = () => {
   return (
     <nav className="w-screen text-white  px-5 flex justify-between fixed top-0 navbar-effect z-10">
@@ -24,7 +24,7 @@ const Navbar = () => {
           <SearchBar />
         </li>
         <li>
-          <LogInButton />
+          <LogOutButton />
         </li>
       </ul>
     </nav>
