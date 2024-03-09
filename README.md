@@ -8,6 +8,10 @@ Welcome to the Netflix Clone project! This project is a React.js application bui
 
 Click on the image above to watch a demo showcasing the features and functionality of the Netflix Clone project.
 
+Youtube Link -> https://youtu.be/jebi_lV81tE?si=QBy__jcEIml_Fg4F
+
+Deployed URL --> https://netflix-clone-sepia-beta.vercel.app
+
 ## Features
 
 - **User Interface**: The application provides a sleek and intuitive user interface, reminiscent of Netflix.
