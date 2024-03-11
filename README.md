@@ -27,8 +27,8 @@ Deployed URL --> https://netflix-clone-sepia-beta.vercel.app
 - **React.js**: The project is built using [React.js](https://reactjs.org/), a popular JavaScript library for building user interfaces.
 - **Tailwind CSS**: [Tailwind CSS](https://tailwindcss.com/) is used for styling the application, providing utility-first and responsive CSS classes.
 - **TMDB API**: The TMDB API is utilized to fetch movie data dynamically.
-- **React Router**: React Router is used for handling navigation within the application.
-- **Debouncing**: Debouncing is implemented in the search functionality for optimizing performance.
+- **Vercel**: Deployed the application using vercel.
+- **Github Desktop,Github**: Managing the versions of done using github.
 
 ## Getting Started
 
@@ -41,9 +41,26 @@ To run the Netflix Clone project locally:
 5. Start the development server by running `npm start`.
 6. Access the application in your web browser at `http://localhost:3000`.
 
-## Contributors
+## Pages Created
 
-- Add your name here if you've contributed to the project.
+1. Sign up Page
+2. Sign in Page
+3. Homepage (Application Page)
+4. Watchlist Page
+5. Profiles page
+
+## Library used
+
+1. Tailwindcss
+2. React Icons
+3. Router Dom
+
+## Language used
+
+1. JSX
+2. JavaScript
+3. HTML
+4. CSS
 
 ## Acknowledgments
 
