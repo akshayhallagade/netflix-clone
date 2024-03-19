@@ -6,7 +6,9 @@ const SignUpElement = () => {
   return (
     <div className="flex items-center gap-2 h-16 mt-7">
       <SignUpInput />
-      <SignUpButton />
+      <div>
+        <SignUpButton />
+      </div>
     </div>
   );
 };

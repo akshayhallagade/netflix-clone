@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { RightSide } from "../../../utils/icons";
 
 const SignInForm = () => {
   const [showpassword, setShowpassword] = useState(true);
@@ -28,7 +29,10 @@ const SignInForm = () => {
         <p className="text-white text-sm text-center">OR</p>
         <button
           className="text-white text-sm bg-gray-700 w-72 p-2 rounded-md "
-          onClick={() => setShowpassword(!showpassword)}
+          onClick={(e) => {
+            e.preventDefault();
+            setShowpassword(!showpassword);
+          }}
         >
           {showpassword ? "use password" : "use a sign-in code "}
         </button>
@@ -62,6 +66,12 @@ const SignInForm = () => {
         </a>
       </p>
       <div className="h-10 "></div>
+      <div className="absolute text-white right-56 " style={{ top: 310 }}>
+        <div className="flex items-center">
+          <RightSide className="rotate-180" />
+          just click here
+        </div>
+      </div>
     </div>
   );
 };

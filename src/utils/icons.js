@@ -21,6 +21,7 @@ import { HiTranslate as Translate } from "react-icons/hi";
 import {
   FaAngleRight as RightSide,
   FaCaretDown as ArrowDown,
+  FaArrowUpLong as ArrowUp,
 } from "react-icons/fa6";
 import { GoDotFill as Dot } from "react-icons/go";
 
@@ -45,6 +46,7 @@ export {
   RightSide,
   Notification,
   ArrowDown,
+  ArrowUp,
   Dot,
   Github,
   Instagram,
