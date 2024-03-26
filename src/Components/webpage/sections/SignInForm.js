@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { RightSide } from "../../../utils/icons";
 
 const SignInForm = () => {
   const [showpassword, setShowpassword] = useState(true);
@@ -23,8 +22,9 @@ const SignInForm = () => {
           placeholder="Password"
         />
 
-        <button className="bg-red-700 w-72 text-white text-sm py-2 px-4 rounded-md">
+        <button className="bg-red-700 w-72 text-white text-sm py-2 px-4 rounded-md relative">
           Send sign-in code
+          <div className="absolute -right-24 top-2">{"<-- Click button"}</div>
         </button>
         <p className="text-white text-sm text-center">OR</p>
         <button
@@ -66,12 +66,6 @@ const SignInForm = () => {
         </a>
       </p>
       <div className="h-10 "></div>
-      <div className="absolute text-white right-56 " style={{ top: 310 }}>
-        <div className="flex items-center">
-          <RightSide className="rotate-180" />
-          just click here
-        </div>
-      </div>
     </div>
   );
 };
