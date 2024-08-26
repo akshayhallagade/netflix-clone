@@ -8,6 +8,7 @@ import Collection from "./Collection";
 import Footer from "./Footer";
 
 const Content = (props) => {
+  console.log(props);
   const [ShowDetailes, setShowDetailes] = useState(false);
   const { title, overview } = { ...props.movieData };
 

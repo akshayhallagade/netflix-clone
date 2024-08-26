@@ -1,21 +1,18 @@
 import React from "react";
+import SignInNavbar from "../Components/webpage/sections/SignInNavbar";
 import Footer from "../Components/webpage/sections/Footer";
-import Breakers from "../Components/webpage/elements/Breakers";
-import SectionComponent from "../Components/webpage/sections/SectionComponent";
-import QuestionsSection from "../Components/webpage/sections/QuestionsSection";
-import SignUpHeader from "../Components/webpage/sections/SignUpHeader";
+import SignUpForm from "../Components/webpage/sections/SignUpForm";
+
 const Signup = () => {
   return (
     <>
-      {/* /* // Section1  */}
-      <SignUpHeader />
-      <Breakers />
-      {/* // Section2, Section3 Section4  :: Because this sections are similar*/}
-      <SectionComponent />
-      {/* // Section 5 */}
-      <QuestionsSection />
-      <Breakers />
-      <Footer />
+      <div className="w-screen signin">
+        <SignInNavbar />
+        <div className="w-screen flex items-center justify-center py-20">
+          <SignUpForm />
+        </div>
+        <Footer />
+      </div>
     </>
   );
 };

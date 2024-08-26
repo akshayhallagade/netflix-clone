@@ -1,15 +1,20 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Header from "../Components/application/sections/Header";
 import Navbar from "../Components/application/sections/Navbar";
 import Content from "../Components/application/sections/Content";
 import SearchedContent from "../Components/application/combinedElements/SearchedContent";
 import { SearchItemsContext } from "../Context/SearchedItemsProvider";
+import { useCurrentUser } from "../hooks/query/user";
+import { useNavigate } from "react-router-dom";
 
 const Browse = () => {
   // Layer 1 -> -10 (HeaderImage, Background Color Black)
   // Layer 2 ->  0  (HeaderContent, Movie List)
   // Layer 3 ->  10 (Navbar)
 
+  const navigate = useNavigate();
+  //getting current user data
+  const { user, isLoading } = useCurrentUser();
   const [data, setData] = useState({});
 
   // getting search Result;
@@ -21,12 +26,12 @@ const Browse = () => {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NmRhM2Q3ZDAyNTE1MjQ0ZjY1YTg0Y2ZiNmNkNGM3MiIsInN1YiI6IjY1ZGEyMTcwNjA5NzUwMDE2NGE2M2U3ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yP7LlKw2lGJUvmDQ3gHRrAZFs0yhSHGK0d3zPSkk24M",
+      Authorization: `Bearer ${process.env.TMDB_API}`,
     },
   };
 
   useEffect(() => {
+    if (!user && !isLoading) navigate("/signin");
     const fetchData = () =>
       fetch("https://api.themoviedb.org/3/movie/popular", options)
         .then((response) => response.json())
@@ -40,7 +45,7 @@ const Browse = () => {
         .catch((err) => console.error(err));
 
     fetchData();
-  }, []);
+  }, [user, isLoading]);
 
   return (
     <div className="relative h-fit">
@@ -50,7 +55,6 @@ const Browse = () => {
         <SearchedContent />
       ) : (
         <>
-          {" "}
           <Header movieData={data} movieImg={data.backdrop_path} />
           <Content movieData={data} />
         </>

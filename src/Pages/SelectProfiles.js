@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import profile1 from "../img/profiles/profile1.png";
 import profile2 from "../img/profiles/profile2.png";
 import profile3 from "../img/profiles/profile3.png";
@@ -6,10 +6,19 @@ import profile4 from "../img/profiles/profile4.png";
 import profile5 from "../img/profiles/profile5.png";
 import ProfileButton from "../Components/webpage/elements/ProfileButton";
 import Profile from "../Components/webpage/elements/Profile";
+import { useCurrentUser } from "../hooks/query/user";
+import { useNavigate } from "react-router-dom";
 
-const Profiles = () => {
+const SelectProfiles = () => {
+  const navigate = useNavigate();
+  const { user, isLoading } = useCurrentUser();
+
+  useEffect(() => {
+    if (!user && !isLoading) navigate("/signin");
+  }, [user, isLoading]);
+
   const profileData = [
-    { name: "Akshay Hallagde", image: profile1 },
+    { name: "Akshay Hallagade", image: profile1 },
     { name: "P", image: profile2 },
     { name: "R", image: profile3 },
     { name: "Aniket", image: profile4 },
@@ -34,4 +43,4 @@ const Profiles = () => {
   );
 };
 
-export default Profiles;
+export default SelectProfiles;

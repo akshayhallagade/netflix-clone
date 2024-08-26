@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import Profile from "../../../img/profiles/profile1.png";
 import { ArrowDown } from "../../../utils/icons";
+import { useCurrentUser } from "../../../hooks/query/user";
 
 const LogOutButton = () => {
   const [showButton, setShowButton] = useState(false);
+
+  const { user, isLoading } = useCurrentUser();
+
+  const logoutbutton = () => {
+    localStorage.removeItem("token");
+  };
+
   return (
     <div className="relative">
       <div
@@ -17,13 +25,24 @@ const LogOutButton = () => {
         />
       </div>
       <div
-        className={`absolute bg-gray-900 top-10 shadow-md bg-opacity-50 shadow-indigo-200 right-0 py-2 px-5 ${
+        className={`absolute flex items-center justify-center flex-col bg-gray-900 top-10 shadow-md bg-opacity-50 shadow-indigo-200 right-0 py-2 px-5 ${
           showButton ? "visible" : "invisible"
         }`}
       >
+        {isLoading && <p>isLoading</p>}
+        {user && (
+          <div>
+            <p className="text-sm text-white hover:text-red-400 text-center">
+              {user.firstName} {user.lastName}
+            </p>
+            <p className="text-xs text-center">{user.email}</p>
+            <p className="text-center">age : {user.age}</p>
+          </div>
+        )}
         <a
           href="/"
-          className="w-fit p-1 text-white text-nowrap hover:underline hover:text-red-400"
+          onClick={logoutbutton}
+          className="w-fit p-1 text-white text-nowrap hover:underline hover:text-red-400 mt-4"
         >
           Sign out of Netflix
         </a>
