@@ -2,6 +2,21 @@
 
 Welcome to the Netflix Clone project! This project is a React.js application built with Tailwind CSS, offering a user-friendly interface inspired by Netflix. It integrates features like card transformations, calling TMDB API to fetch movie data, search functionality, and a watchlist feature. The application utilizes React Router for navigation and implements debouncing in the search feature for enhanced performance.
 
+---
+
+### Important Note : Before getting started.
+
+I have made the both front end and backend of the website.
+
+#### For Front and Back end -->
+
+1.  Clone second branch of the this repo
+2.  use this backend link https://github.com/akshayhallagade/netflix-clone-backend
+
+#### For only Front(with no connected to backend)
+
+1.  use master branch of this repo.
+
 ## Demo
 
 [![Netflix Clone Demo](public/Capture.PNG)](https://youtu.be/jebi_lV81tE?si=QBy__jcEIml_Fg4F)
@@ -32,7 +47,20 @@ Deployed URL --> https://netflix-clone-sepia-beta.vercel.app
 
 ## Getting Started
 
-To run the Netflix Clone project locally:
+### Important Note : Before getting started
+
+I have made the both front end and backend of the website.
+
+#### For only Front(with no connected to backend)
+
+1.  use master branch of this repo.
+
+#### For Front and Back end -->
+
+1.  Clone second branch of this repo. -> **Backend connected branch**
+2.  use this backend link https://github.com/akshayhallagade/netflix-clone-backend
+
+### To run the Netflix Clone project locally:
 
 1. Clone this repository to your local machine.
 2. Navigate to the project directory in your terminal.
